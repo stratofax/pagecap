@@ -1,7 +1,7 @@
 """Define meta information about the pagecap package."""
 
 __title__ = 'pagecap'
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __description__ = ('Capture specified web pages as '
                    'PNG files of various resolutions')
 __url__ = 'https://github.com/stratofax/pagecap'
