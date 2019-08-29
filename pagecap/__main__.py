@@ -2,8 +2,8 @@
     Handles CLI or use as library
 """
 
-import metadata
+import pc_metadata
 
-print(metadata.__title__)
-print('Version ' + metadata.__version__)
-print(metadata.__description__)
+print(pc_metadata.__title__)
+print('Version ' + pc_metadata.__version__)
+print(pc_metadata.__description__)
