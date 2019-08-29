@@ -1,6 +1,9 @@
 """
-    Capture specified web pages as PNG files of various resolutions
+    Handles CLI or use as library
 """
-print('pagecap')
-print('Python package version 0.1')
-print('Capture specified web pages as PNG files of various resolutions')
+
+import metadata
+
+print(metadata.__title__)
+print('Version ' + metadata.__version__)
+print(metadata.__description__)
