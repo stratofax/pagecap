@@ -2,8 +2,8 @@
     Handles CLI or use as library
 """
 
-import pc_metadata
+import pagecap_metadata
 
-print(pc_metadata.__title__)
-print('Version ' + pc_metadata.__version__)
-print(pc_metadata.__description__)
+print(pagecap_metadata.__title__)
+print('Version ' + pagecap_metadata.__version__)
+print(pagecap_metadata.__description__)
