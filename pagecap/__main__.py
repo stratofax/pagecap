@@ -4,6 +4,11 @@ Handles CLI or use as library module
 
 import click
 
+# get the latest chromedriver here:
+# https://sites.google.com/a/chromium.org/chromedriver/downloads
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 import pagecap_metadata as pcmeta
 
 @click.command()
