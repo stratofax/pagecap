@@ -4,17 +4,9 @@ Capture specified URLs as PNG image files
 
 ## Installation
 
-Use pipenv:
-
-`pipenv install`
-
-Then, set up the virtual environment:
-
-`pipenv shell`
-
-When you're done,
-
-`pipenv exit`
+1. Use pipenv: `pipenv install`
+2. Set up the virtual environment: `pipenv shell`
+3. When you're done, enter: `pipenv exit`
 
 Your installation will persist, just run `pipenv shell` to access your virtual environment.
 
@@ -28,9 +20,7 @@ In your pipenv shell environment, enter
 
 to create a PNG file of https://example.com/sample.html.
 
-Help:
-
-`python pagecap --help`
+Help: `python pagecap --help`
 
 ## More Info
 
