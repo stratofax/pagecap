@@ -2,8 +2,7 @@
 
 __title__ = 'pagecap'
 __version__ = '0.0.5'
-__description__ = ('Capture specified web pages as '
-                   'PNG files of various resolutions')
+__description__ = ('Capture specified URLs as PNG image files')
 __url__ = 'https://github.com/stratofax/pagecap'
 __author__ = 'Neil Johnson'
 __author_email__ = 'neil@cadent.com'

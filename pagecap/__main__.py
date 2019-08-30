@@ -7,17 +7,22 @@ import click
 import pagecap_metadata as pcmeta
 
 @click.command()
+@click.version_option(pcmeta.__version__)
 @click.argument('urls', nargs=-1)
 @click.option(
-    '--urls_file',
+    '-f', 
+    '--urlfile',
     type=click.File('r'),
     required=False,
+    help='Text file containing a list of URLs to capture.'
 )
 
-def capture_page(urls_file, urls):
-    print(pcmeta.__title__)
-    print('Version ' + pcmeta.__version__)
-    print(pcmeta.__description__)
+def capture_page(urlfile, urls):
+    """
+    Capture specified URLs as PNG image files
+    """
+    # program 
+    print(pcmeta.__title__ + ', version ' + pcmeta.__version__)
 
     if urls:
         add_s = ''
@@ -26,6 +31,10 @@ def capture_page(urls_file, urls):
         args_listed = ('URL{} specified: {}'.format(add_s, page_count))
         click.echo(args_listed)
         click.echo(urls)
+    
+    else:        # no URLs provided
+        click.echo('Please enter at least one URL to capture!')
+        click.echo('Use --help for a list of options.')
 
 # if running as a script from the CLI
 if __name__ == '__main__':

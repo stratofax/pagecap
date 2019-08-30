@@ -1,6 +1,6 @@
 # pagecap
 
-Capture specified web pages as PNG files of various resolutions
+Capture specified URLs as PNG image files
 
 ## Installation
 
