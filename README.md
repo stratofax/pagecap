@@ -1,6 +1,6 @@
 # pagecap
 
-Capture specified URLs as PNG image files
+Capture specified URLs as PNG image files.
 
 ## Requirements
 
