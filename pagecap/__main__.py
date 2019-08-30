@@ -13,18 +13,24 @@ from selenium import webdriver
 # local package imports
 import pagecap_metadata as pcmeta
 
+MAX_URLS = 3
+
 @click.command()
 @click.version_option(pcmeta.__version__)
 @click.argument('urls', nargs=-1)
-@click.option(
-    '-l', 
-    '--urlfile',
-    type=click.File('r'),
-    required=False,
-    help='Text file containing a list of URLs to capture.'
-)
 
-def capture_page(urlfile, urls):
+
+## TODO: Add file option
+
+# @click.option(
+    # '-l', 
+    # '--urlfile',
+    # type=click.File('r'),
+    # required=False,
+    # help='Text file containing a list of URLs to capture.'
+    # ) 
+
+def capture_page(urls):
     """
     Capture specified URLs as PNG image files
     """
@@ -36,23 +42,37 @@ def capture_page(urlfile, urls):
         page_count = len(urls) 
         if page_count > 1: add_s = 's'
         how_many = ('URL{} specified: {}'.format(add_s, page_count))
-
-        click.echo(how_many)
-        # click.echo(urls)
+        if page_count <= MAX_URLS:
+            # only handle up to the arbitrary limit
+            click.echo(how_many)
+            click.echo(urls)
+            
+            x = 0
+            for url in urls:
+                x += 1
+                cap_status = 'Capturing {} ... ({} of {})'.format(url, x, page_count)
+                click.echo(cap_status)
+                make_png(url, x)
         
-        for url in urls:
-            click.echo(url)
-            make_png(url)
-
+        else:
+            # too many URLs!
+            too_many = (
+                '{} currently only processes '
+                'up to {} URLS at once. '.format(pcmeta.__title__, MAX_URLS)
+                )
+            click.echo(too_many)
     
     else:        # no URLs provided
         click.echo('Please enter at least one URL to capture!')
         click.echo('Use --help for a list of options.')
 
-def make_png(capture_url):
+def make_png(capture_url, count):
     """ create a PNG file from the URL provided 
         from https://stackoverflow.com/questions/41721734/take-screenshot-of-full-page-with-selenium-python-with-chromedriver/57338909#57338909
     """
+
+    fname = str(count) + '.png'
+
     options = webdriver.ChromeOptions()
     options.headless = True
 
@@ -61,7 +81,7 @@ def make_png(capture_url):
 
     S = lambda X: driver.execute_script('return document.body.parentNode.scroll'+X)
     driver.set_window_size(S('Width'),S('Height')) # May need manual adjustment
-    driver.find_element_by_tag_name('body').screenshot('web_screenshot.png')
+    driver.find_element_by_tag_name('body').screenshot(fname)
 
     driver.quit()
 

@@ -2,6 +2,13 @@
 
 Capture specified URLs as PNG image files
 
+## Requirements
+
+* Python 3.7 (tested with this version).
+* Python libraries: `pip`, `pipenv` (to install and execute); `click` and `selenium`.
+* Google Chrome browser (current stable version recommended).
+* The matching [Selenium Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads) for your version of Chrome.
+
 ## Installation
 
 1. Use pipenv: `pipenv install`
