@@ -2,6 +2,10 @@
 
 ## Version history
 
+### 0.0.6
+
+Import Selenium, loop through multiple files, capture full page
+
 ### 0.0.5
 
 _August 30, 2019_
