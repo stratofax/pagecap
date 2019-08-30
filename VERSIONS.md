@@ -2,6 +2,16 @@
 
 ## Version history
 
+### 0.0.7
+
+Double-Oh-Seven, lucky indeed! This version captures up to seven (7) complete pages, entered at the command line. Runs Google Chrome in headless mode.
+
+Usage:
+
+`python pagecap  http://cadent.com/ https://cadent.com/blog-posts/ ...`
+
+Your PNG files will appear in the script directory, numbered in sequence.
+
 ### 0.0.6
 
 Import Selenium, loop through multiple files, capture full page

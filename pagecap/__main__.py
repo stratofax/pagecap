@@ -13,7 +13,7 @@ from selenium import webdriver
 # local package imports
 import pagecap_metadata as pcmeta
 
-MAX_URLS = 3
+MAX_URLS = 7
 
 @click.command()
 @click.version_option(pcmeta.__version__)
@@ -67,9 +67,9 @@ def capture_page(urls):
         click.echo('Use --help for a list of options.')
 
 def make_png(capture_url, count):
-    """ create a PNG file from the URL provided 
-        from https://stackoverflow.com/questions/41721734/take-screenshot-of-full-page-with-selenium-python-with-chromedriver/57338909#57338909
-    """
+    """ 
+    create a PNG file from the URL provided 
+     """
 
     fname = str(count) + '.png'
 
