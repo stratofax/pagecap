@@ -11,9 +11,10 @@ Capture specified URLs as PNG image files.
 
 ## Installation
 
-1. Use pipenv: `pipenv install`
-2. Set up the virtual environment: `pipenv shell`
-3. When you're done, enter: `pipenv exit`
+1. Install pipenv for your account: `pip3 install --user pipenv`
+2. Use pipenv: `pipenv install`
+3. Set up the virtual environment: `pipenv shell`
+4. When you're done, enter: `pipenv exit`
 
 Your installation will persist, just run `pipenv shell` to access your virtual environment.
 
