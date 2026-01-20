@@ -2,9 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Note: This project is archived.** Consider using [Playwright](https://playwright.dev/) for modern web capture needs.
+
 ## Project Overview
 
-pagecap is a Python CLI tool that captures web pages as PNG screenshots using Selenium with headless Chrome.
+pagecap is a Python CLI tool that captures web pages as PNG screenshots using Selenium with headless Chrome. Requires Python 3.12+.
 
 ## Commands
 

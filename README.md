@@ -1,10 +1,12 @@
 # pagecap
 
+> **⚠️ ARCHIVED PROJECT**: This repository is no longer actively maintained. The functionality provided here has been superseded by more capable modern tools like [Playwright](https://playwright.dev/), which offers cross-browser support, better screenshot APIs, and active development. Consider using `playwright screenshot` or the Playwright API for your web capture needs.
+
 Capture specified URLs as PNG image files.
 
 ## Requirements
 
-* Python 3.7 (tested with this version).
+* Python 3.12+ (requires modern Python for security updates).
 * Python libraries: `pip`, `pipenv` (to install and execute); `click` and `selenium`.
 * Google Chrome browser (current stable version recommended).
 * The matching [Selenium Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads) for your version of Chrome.
